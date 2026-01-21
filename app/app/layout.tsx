@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import type { ReactNode } from "react";
 import { backendFetch } from "@/lib/server-backend";
 import { LogoutButton } from "@/components/app/logout-button";
 import { AppShellNav } from "@/components/app/app-shell-nav";
@@ -10,7 +11,7 @@ async function requireMe() {
   return r.json();
 }
 
-export default async function AppLayout({ children }: { children: React.ReactNode }) {
+export default async function AppLayout({ children }: { children: ReactNode }) {
   const me = await requireMe();
   const navItems = [
     { label: "داشبورد", href: "/app" },
@@ -28,13 +29,13 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   return (
     <div className="min-h-screen bg-ink-50">
       <header className="sticky top-0 z-30 border-b border-ink-100/70 bg-white/85 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+        <div className="flex items-center justify-between gap-4 px-4 py-3 md:px-6 lg:px-8">
           <div className="flex items-center gap-3">
             <Link href="/app" className="flex items-center gap-3">
               <div className="h-10 w-10 rounded-xl bg-brand-gradient shadow-card" />
               <div>
                 <div className="text-sm font-bold text-ink-900">توکان</div>
-                <div className="text-xs text-ink-500">ورژن مدرن وردپرسی</div>
+                <div className="text-xs text-ink-500">داشبورد مالی و رفرال</div>
               </div>
             </Link>
           </div>
@@ -51,11 +52,11 @@ export default async function AppLayout({ children }: { children: React.ReactNod
         </div>
       </header>
 
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 px-4 pb-8 pt-4 md:grid-cols-[260px_1fr]">
+      <div className="grid grid-cols-1 gap-4 px-4 pb-20 pt-4 md:grid-cols-[260px_minmax(0,1fr)] md:px-6 lg:px-8">
         <AppShellNav items={navItems} />
         <main className="min-w-0 space-y-4">
           <div className="rounded-xlplus bg-white/60 px-4 py-3 text-xs text-ink-500 ring-1 ring-ink-100 shadow-soft backdrop-blur">
-            حس وردپرس مدرن را داریم؛ همه‌چیز در نسخه آزمایشی است.
+            داشبورد توکان برای مدیریت مالی و رفرال شما.
           </div>
           {children}
         </main>

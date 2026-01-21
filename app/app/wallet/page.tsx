@@ -15,7 +15,7 @@ export default async function WalletPage() {
     <div className="space-y-4">
       <div className="surface p-6">
         <h1 className="text-lg font-bold text-ink-900">کیف پول</h1>
-        <p className="mt-1 text-sm text-ink-500">مدیریت موجودی، شارژ و برداشت با حس وردپرس مدرن.</p>
+        <p className="mt-1 text-sm text-ink-500">مدیریت موجودی، شارژ و برداشت در یک داشبورد یکپارچه.</p>
       </div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3">

@@ -11,12 +11,15 @@ export default async function DashboardHome() {
         <div className="pointer-events-none absolute inset-0 bg-brand-gradient opacity-90" />
         <div className="relative z-10 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <div>
-            <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/80">Tokan • WP+</div>
-            <h1 className="mt-1 text-2xl font-extrabold text-white">داشبورد مدرن وردپرسی</h1>
-            <p className="mt-2 text-sm text-white/80">نسخه ارتقایافته با حس AI و تجربه آشنا.</p>
+            <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/80">
+              Tokan
+            </div>
+            <h1 className="mt-1 text-2xl font-extrabold text-white">داشبورد مالی و رفرال توکان</h1>
+            <p className="mt-2 text-sm text-white/80">
+              تصویر واضح از کیف پول، تراکنش‌ها و رفرال‌ها در یک نگاه.
+            </p>
             <div className="mt-3 flex flex-wrap gap-2">
-              <span className="accent-chip bg-white/15 text-white ring-white/30">به‌روز</span>
-              <span className="accent-chip bg-white/15 text-white ring-white/30">نسخه بتا</span>
+              <span className="accent-chip bg-white/15 text-white ring-white/30">متمرکز و ساده</span>
             </div>
           </div>
           <div className="flex flex-col gap-2 text-right text-white/90">

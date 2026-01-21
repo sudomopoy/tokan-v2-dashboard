@@ -8,14 +8,14 @@ export default function HomePage() {
         <div className="surface w-full max-w-2xl bg-white/10 p-10 text-white ring-1 ring-white/25">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <div>
-              <div className="text-xs uppercase tracking-[0.25em] text-white/80">Tokan • WP+</div>
-              <h1 className="mt-1 text-3xl font-black">داشبورد فروشگاه‌ساز توکان</h1>
+              <div className="text-xs uppercase tracking-[0.25em] text-white/80">Tokan</div>
+              <h1 className="mt-1 text-3xl font-black">داشبورد توکان برای مدیریت مالی</h1>
               <p className="mt-2 text-sm text-white/80">
-                حس آشنای وردپرس، اما مدرن و نرم با چاشنی AI.
+                همه‌چیز از کیف پول تا تراکنش‌ها و رفرال‌ها در یک محیط ساده و مدرن.
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
-                <span className="accent-chip bg-white/15 text-white ring-white/30">نسخه بتا</span>
-                <span className="accent-chip bg-white/15 text-white ring-white/30">UI نوستالژیک</span>
+                <span className="accent-chip bg-white/15 text-white ring-white/30">سریع و سبک</span>
+                <span className="accent-chip bg-white/15 text-white ring-white/30">طراحی ریسپانسیو</span>
               </div>
             </div>
             <div className="rounded-xlplus bg-white/15 px-4 py-3 text-sm font-semibold ring-1 ring-white/25">
@@ -30,7 +30,7 @@ export default function HomePage() {
             >
               ورود / ثبت‌نام
             </Link>
-            <span className="text-sm text-white/80">شروع سریع داشبورد وردپرس مدرن</span>
+            <span className="text-sm text-white/80">شروع سریع داشبورد مالی توکان</span>
           </div>
         </div>
       </div>
