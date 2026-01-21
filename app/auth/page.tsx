@@ -99,19 +99,23 @@ export default function AuthPage() {
   }
 
   return (
-    <main className="min-h-screen bg-brand-gradient">
-      <div className="mx-auto flex min-h-screen max-w-5xl items-center justify-center p-6">
-        <div className="card w-full max-w-md p-6">
+    <main className="relative min-h-screen bg-brand-gradient">
+      <div className="pointer-events-none absolute inset-0 bg-glass-1 opacity-60" />
+      <div className="relative mx-auto flex min-h-screen max-w-5xl items-center justify-center p-6">
+        <div className="surface w-full max-w-md bg-white/90 p-6 ring-1 ring-ink-100">
           <div className="flex items-center justify-between">
-            <h1 className="text-xl font-bold">{title}</h1>
-            <div className="text-xs text-slate-500">توکان</div>
+            <div>
+              <div className="text-xs uppercase tracking-[0.25em] text-ink-500">Tokan • WP+</div>
+              <h1 className="text-xl font-bold text-ink-900">{title}</h1>
+            </div>
+            <div className="text-xs text-ink-500">توکان</div>
           </div>
 
           {error ? <div className="mt-3 rounded-xl bg-red-50 p-3 text-sm text-red-700">{error}</div> : null}
 
           {step === "phone" ? (
             <div className="mt-6 space-y-3">
-              <label className="block text-sm text-slate-700">شماره موبایل</label>
+              <label className="block text-sm text-ink-700">شماره موبایل</label>
               <Input placeholder="مثلاً 09123456789" value={phone} onChange={(e) => setPhone(e.target.value)} />
               <Button disabled={loading || phone.trim().length < 10} onClick={onRequestOtp} className="w-full">
                 {loading ? "..." : "ارسال کد تایید"}
@@ -121,10 +125,10 @@ export default function AuthPage() {
 
           {step === "otp" ? (
             <div className="mt-6 space-y-3">
-              <div className="text-sm text-slate-600">کد تایید ارسال‌شده را وارد کنید.</div>
+              <div className="text-sm text-ink-600">کد تایید ارسال‌شده را وارد کنید.</div>
               {debugCode ? (
-                <div className="rounded-xl bg-slate-50 p-3 text-sm text-slate-700">
-                  <div className="text-xs text-slate-500">DEBUG CODE</div>
+                <div className="rounded-xlplus bg-ink-50 p-3 text-sm text-ink-800 ring-1 ring-ink-100">
+                  <div className="text-xs text-ink-500">DEBUG CODE</div>
                   <div className="mt-1 font-mono">{debugCode}</div>
                 </div>
               ) : null}
@@ -133,7 +137,7 @@ export default function AuthPage() {
                 {loading ? "..." : "تایید و ادامه"}
               </Button>
               <button
-                className="w-full text-center text-sm text-slate-600 underline"
+                className="w-full text-center text-sm text-ink-600 underline"
                 onClick={() => {
                   setStep("phone");
                   setCode("");
@@ -146,7 +150,7 @@ export default function AuthPage() {
 
           {step === "profile" ? (
             <div className="mt-6 space-y-3">
-              <div className="text-sm text-slate-600">برای تکمیل ثبت‌نام، اطلاعات پایه را وارد کنید.</div>
+              <div className="text-sm text-ink-600">برای تکمیل ثبت‌نام، اطلاعات پایه را وارد کنید.</div>
               <Input placeholder="نام" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
               <Input placeholder="نام خانوادگی" value={lastName} onChange={(e) => setLastName(e.target.value)} />
               <Input

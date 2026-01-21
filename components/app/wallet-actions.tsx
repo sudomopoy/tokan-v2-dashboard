@@ -72,10 +72,10 @@ export function WalletActions() {
 
   return (
     <div className="space-y-4">
-      {error ? <div className="rounded-xl bg-red-50 p-3 text-sm text-red-700">{error}</div> : null}
+      {error ? <div className="rounded-xlplus bg-red-50 p-3 text-sm text-red-700 ring-1 ring-red-100">{error}</div> : null}
 
-      <div className="card p-5">
-        <div className="text-sm font-bold">شارژ کیف پول</div>
+      <div className="surface p-5">
+        <div className="text-sm font-bold text-ink-900">شارژ کیف پول</div>
         <div className="mt-3 grid grid-cols-1 gap-2 md:grid-cols-[1fr_auto]">
           <Input placeholder="مبلغ (تومان)" value={amountToman} onChange={(e) => setAmountToman(e.target.value)} />
           <Button disabled={loading} onClick={initiateZarinpal}>
@@ -89,18 +89,18 @@ export function WalletActions() {
             ثبت کارت‌به‌کارت
           </Button>
         </div>
-        <div className="mt-2 text-xs text-slate-500">کارت‌به‌کارت پس از بررسی ادمین به موجودی اضافه می‌شود.</div>
+        <div className="mt-2 text-xs text-ink-500">کارت‌به‌کارت پس از بررسی ادمین به موجودی اضافه می‌شود.</div>
       </div>
 
-      <div className="card p-5">
-        <div className="text-sm font-bold">برداشت</div>
+      <div className="surface p-5">
+        <div className="text-sm font-bold text-ink-900">برداشت</div>
         <div className="mt-3 grid grid-cols-1 gap-2 md:grid-cols-[1fr_auto]">
           <Input placeholder="مبلغ (تومان)" value={withdrawToman} onChange={(e) => setWithdrawToman(e.target.value)} />
           <Button variant="secondary" disabled={loading} onClick={requestWithdraw}>
             ثبت درخواست برداشت
           </Button>
         </div>
-        <div className="mt-2 text-xs text-slate-500">بعد از تایید ادمین، برداشت به وضعیت پرداخت‌شده تغییر می‌کند.</div>
+        <div className="mt-2 text-xs text-ink-500">بعد از تایید ادمین، برداشت به وضعیت پرداخت‌شده تغییر می‌کند.</div>
       </div>
     </div>
   );

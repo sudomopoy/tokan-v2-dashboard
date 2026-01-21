@@ -8,9 +8,22 @@ body {
 }
 
 body {
-  @apply bg-slate-50 text-slate-900;
+  @apply min-h-full bg-ink-50 text-ink-900;
+  background-image: theme("backgroundImage.glass-1");
 }
 
 .card {
-  @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+  @apply rounded-xlplus border border-ink-100/70 bg-white/80 shadow-card backdrop-blur;
+}
+
+.surface {
+  @apply rounded-xlplus border border-ink-100/60 bg-white/75 shadow-soft backdrop-blur;
+}
+
+.muted {
+  @apply text-sm text-ink-500;
+}
+
+.accent-chip {
+  @apply inline-flex items-center gap-2 rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-700 ring-1 ring-brand-200;
 }

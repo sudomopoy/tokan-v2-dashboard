@@ -7,11 +7,11 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export function Button({ className, variant = "primary", ...props }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium transition-colors disabled:opacity-50 disabled:pointer-events-none";
+    "inline-flex items-center justify-center rounded-xlplus px-4 py-2 text-sm font-semibold tracking-tight transition-all disabled:opacity-50 disabled:pointer-events-none shadow-soft";
   const variants: Record<NonNullable<ButtonProps["variant"]>, string> = {
-    primary: "bg-brand-600 text-white hover:bg-brand-700",
-    secondary: "bg-slate-900 text-white hover:bg-slate-800",
-    ghost: "bg-transparent text-slate-900 hover:bg-slate-100"
+    primary: "bg-gradient-to-r from-brand-600 to-brand-500 text-white hover:from-brand-700 hover:to-brand-600",
+    secondary: "bg-ink-900 text-white hover:bg-ink-800",
+    ghost: "bg-white/70 text-ink-800 ring-1 ring-ink-100 hover:ring-ink-200 hover:bg-white"
   };
   return <button className={cn(base, variants[variant], className)} {...props} />;
 }

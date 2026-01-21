@@ -1,0 +1,14 @@
+node_modules
+
+build
+
+coverage
+
+*.rar
+
+
+*.zip
+
+.nvmrc
+
+.env.local
